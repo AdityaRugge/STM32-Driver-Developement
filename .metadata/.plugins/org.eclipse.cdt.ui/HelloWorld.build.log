@@ -1,0 +1,10 @@
+22:41:04 **** Incremental Build of configuration Debug for project HelloWorld ****
+make -j4 all 
+arm-none-eabi-size  HelloWorld.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4872	     92	   1900	   6864	   1ad0	HelloWorld.elf
+Finished building: default.size.stdout
+ 
+
+22:41:04 Build Finished. 0 errors, 0 warnings. (took 266ms)
+
