@@ -1,36 +1,24 @@
-00:04:51 **** Clean-only build of configuration Debug for project HelloWorld_OpenOCD_Config ****
-make -j4 clean 
-rm -rf ./Startup/startup_stm32f446retx.d ./Startup/startup_stm32f446retx.o
-rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
-rm -rf HelloWorld_OpenOCD_Config.elf HelloWorld_OpenOCD_Config.list HelloWorld_OpenOCD_Config.map default.size.stdout
- 
-00:09:03 **** Build of configuration Debug for project HelloWorld_OpenOCD_Config ****
+17:58:49 **** Build of configuration Debug for project SampleApp ****
 make -j4 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "HelloWorld_OpenOCD_Config.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Courses\STM32-Driver-Developement\HelloWorld_OpenOCD_Config\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="HelloWorld_OpenOCD_Config.map" -Wl,--gc-sections -static -specs=rdimon.specs -lc -lrdimon --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: HelloWorld_OpenOCD_Config.elf
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "SampleApp.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Courses\STM32-Driver-Developement\SampleApp\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SampleApp.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SampleApp.elf
  
-arm-none-eabi-size  HelloWorld_OpenOCD_Config.elf 
-arm-none-eabi-objdump -h -S HelloWorld_OpenOCD_Config.elf  > "HelloWorld_OpenOCD_Config.list"
+arm-none-eabi-size  SampleApp.elf 
+arm-none-eabi-objdump -h -S SampleApp.elf  > "SampleApp.list"
    text	   data	    bss	    dec	    hex	filename
-   4548	    100	   2076	   6724	   1a44	HelloWorld_OpenOCD_Config.elf
+   6292	    164	   1900	   8356	   20a4	SampleApp.elf
 Finished building: default.size.stdout
  
-Finished building: HelloWorld_OpenOCD_Config.list
+Finished building: SampleApp.list
  
-00:11:31 **** Incremental Build of configuration Debug for project HelloWorld_OpenOCD_Config ****
+17:59:47 **** Incremental Build of configuration Debug for project SampleApp ****
 make -j4 all 
-arm-none-eabi-size  HelloWorld_OpenOCD_Config.elf 
+arm-none-eabi-size  SampleApp.elf 
    text	   data	    bss	    dec	    hex	filename
-   4548	    100	   2076	   6724	   1a44	HelloWorld_OpenOCD_Config.elf
-Finished building: default.size.stdout
- 
-00:19:36 **** Incremental Build of configuration Debug for project HelloWorld_OpenOCD_Config ****
-make -j4 all 
-arm-none-eabi-size  HelloWorld_OpenOCD_Config.elf 
-   text	   data	    bss	    dec	    hex	filename
-   4548	    100	   2076	   6724	   1a44	HelloWorld_OpenOCD_Config.elf
+   6292	    164	   1900	   8356	   20a4	SampleApp.elf
 Finished building: default.size.stdout
  
