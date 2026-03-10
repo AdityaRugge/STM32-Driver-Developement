@@ -1,150 +1,17 @@
-20:15:16 **** Incremental Build of configuration Debug for project SampleApp ****
-make -j4 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "SampleApp.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Courses\STM32-Driver-Developement\SampleApp\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SampleApp.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: SampleApp.elf
- 
-arm-none-eabi-size  SampleApp.elf 
-arm-none-eabi-objdump -h -S SampleApp.elf  > "SampleApp.list"
-   text	   data	    bss	    dec	    hex	filename
-   6300	    164	   1900	   8364	   20ac	SampleApp.elf
-Finished building: default.size.stdout
- 
-Finished building: SampleApp.list
- 
-20:15:33 **** Incremental Build of configuration Debug for project SampleApp ****
-make -j4 all 
-arm-none-eabi-size  SampleApp.elf 
-   text	   data	    bss	    dec	    hex	filename
-   6300	    164	   1900	   8364	   20ac	SampleApp.elf
-Finished building: default.size.stdout
- 
-20:16:02 **** Incremental Build of configuration Debug for project SampleApp ****
-make -j4 all 
-arm-none-eabi-size  SampleApp.elf 
-   text	   data	    bss	    dec	    hex	filename
-   6300	    164	   1900	   8364	   20ac	SampleApp.elf
-Finished building: default.size.stdout
- 
-20:16:26 **** Incremental Build of configuration Debug for project SampleApp ****
-make -j4 all 
-arm-none-eabi-size  SampleApp.elf 
-   text	   data	    bss	    dec	    hex	filename
-   6300	    164	   1900	   8364	   20ac	SampleApp.elf
-Finished building: default.size.stdout
- 
-20:17:12 **** Incremental Build of configuration Debug for project SampleApp ****
-make -j4 all 
-arm-none-eabi-size  SampleApp.elf 
-   text	   data	    bss	    dec	    hex	filename
-   6300	    164	   1900	   8364	   20ac	SampleApp.elf
-Finished building: default.size.stdout
- 
-20:18:58 **** Incremental Build of configuration Debug for project SampleApp ****
-make -j4 all 
-arm-none-eabi-size  SampleApp.elf 
-   text	   data	    bss	    dec	    hex	filename
-   6300	    164	   1900	   8364	   20ac	SampleApp.elf
-Finished building: default.size.stdout
- 
-20:19:21 **** Incremental Build of configuration Debug for project SampleApp ****
-make -j4 all 
-arm-none-eabi-size  SampleApp.elf 
-   text	   data	    bss	    dec	    hex	filename
-   6300	    164	   1900	   8364	   20ac	SampleApp.elf
-Finished building: default.size.stdout
- 
-20:20:24 **** Incremental Build of configuration Debug for project SampleApp ****
-make -j4 all 
-arm-none-eabi-size  SampleApp.elf 
-   text	   data	    bss	    dec	    hex	filename
-   6300	    164	   1900	   8364	   20ac	SampleApp.elf
-Finished building: default.size.stdout
- 
-20:20:40 **** Incremental Build of configuration Debug for project SampleApp ****
-make -j4 all 
-arm-none-eabi-size  SampleApp.elf 
-   text	   data	    bss	    dec	    hex	filename
-   6300	    164	   1900	   8364	   20ac	SampleApp.elf
-Finished building: default.size.stdout
- 
-20:21:28 **** Incremental Build of configuration Debug for project SampleApp ****
-make -j4 all 
-arm-none-eabi-size  SampleApp.elf 
-   text	   data	    bss	    dec	    hex	filename
-   6300	    164	   1900	   8364	   20ac	SampleApp.elf
-Finished building: default.size.stdout
- 
-20:29:41 **** Incremental Build of configuration Debug for project SampleApp ****
-make -j4 all 
-arm-none-eabi-size  SampleApp.elf 
-   text	   data	    bss	    dec	    hex	filename
-   6300	    164	   1900	   8364	   20ac	SampleApp.elf
-Finished building: default.size.stdout
- 
-23:16:38 **** Build of configuration Debug for project HelloWorld ****
-make -j4 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "HelloWorld.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Courses\STM32-Driver-Developement\HelloWorld\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="HelloWorld.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: HelloWorld.elf
- 
-arm-none-eabi-size  HelloWorld.elf 
-arm-none-eabi-objdump -h -S HelloWorld.elf  > "HelloWorld.list"
-   text	   data	    bss	    dec	    hex	filename
-   3444	     92	   1900	   5436	   153c	HelloWorld.elf
-Finished building: default.size.stdout
- 
-Finished building: HelloWorld.list
- 
-23:18:32 **** Incremental Build of configuration Debug for project HelloWorld ****
-make -j4 all 
-arm-none-eabi-size  HelloWorld.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3444	     92	   1900	   5436	   153c	HelloWorld.elf
-Finished building: default.size.stdout
- 
-23:19:24 **** Incremental Build of configuration Debug for project HelloWorld ****
-make -j4 all 
-arm-none-eabi-size  HelloWorld.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3444	     92	   1900	   5436	   153c	HelloWorld.elf
-Finished building: default.size.stdout
- 
-23:19:58 **** Incremental Build of configuration Debug for project HelloWorld ****
-make -j4 all 
-arm-none-eabi-size  HelloWorld.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3444	     92	   1900	   5436	   153c	HelloWorld.elf
-Finished building: default.size.stdout
- 
-00:35:19 **** Build of configuration Debug for project ADC ****
+01:49:05 **** Build of configuration Debug for project HSI_measurement ****
 make -j4 all 
 arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
 arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
 arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "ADC.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Courses\STM32-Driver-Developement\ADC\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ADC.elf
+arm-none-eabi-gcc -o "HSI_measurement.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Courses\STM32-Driver-Developement\HSI_measurement\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="HSI_measurement.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: HSI_measurement.elf
  
-arm-none-eabi-size  ADC.elf 
-arm-none-eabi-objdump -h -S ADC.elf  > "ADC.list"
+arm-none-eabi-size  HSI_measurement.elf 
+arm-none-eabi-objdump -h -S HSI_measurement.elf  > "HSI_measurement.list"
    text	   data	    bss	    dec	    hex	filename
-    756	      0	   1568	   2324	    914	ADC.elf
+    832	      0	   1568	   2400	    960	HSI_measurement.elf
 Finished building: default.size.stdout
  
-Finished building: ADC.list
- 
-00:36:14 **** Incremental Build of configuration Debug for project ADC ****
-make -j4 all 
-arm-none-eabi-size  ADC.elf 
-   text	   data	    bss	    dec	    hex	filename
-    756	      0	   1568	   2324	    914	ADC.elf
-Finished building: default.size.stdout
- 
-00:39:48 **** Incremental Build of configuration Debug for project ADC ****
-make -j4 all 
-arm-none-eabi-size  ADC.elf 
-   text	   data	    bss	    dec	    hex	filename
-    756	      0	   1568	   2324	    914	ADC.elf
-Finished building: default.size.stdout
+Finished building: HSI_measurement.list
  
