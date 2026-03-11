@@ -1,0 +1,13 @@
+
+#include <stdint.h>
+
+#define SRAM_addr 0x20000008U
+
+
+int main(void)
+{
+	unit32_t *p = (unit32_t*)SRAM_addr;
+
+	for(;;);
+	return 0;
+}

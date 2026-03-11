@@ -71,3 +71,10 @@ int main(void)
 
 	for(;;);
 }
+
+
+void ADC_IRQHandler(void)
+{
+
+}
+

@@ -1,0 +1,13 @@
+
+#include <stdint.h>
+
+#define SRAM 0x20000008
+
+unit_32t *p;
+p = (unit_32t*) SRAM;
+
+int main(void)
+{
+
+	for(;;);
+}
