@@ -1,10 +1,10 @@
-00:37:19 **** Incremental Build of configuration Debug for project volatile_compiler_optimisation ****
+00:50:40 **** Incremental Build of configuration Debug for project volatile_compiler_optimisation ****
 make -j4 all 
 arm-none-eabi-size  volatile_compiler_optimisation.elf 
    text	   data	    bss	    dec	    hex	filename
-    716	      0	   1568	   2284	    8ec	volatile_compiler_optimisation.elf
+    740	      0	   1568	   2308	    904	volatile_compiler_optimisation.elf
 Finished building: default.size.stdout
  
 
-00:37:19 Build Finished. 0 errors, 0 warnings. (took 248ms)
+00:50:40 Build Finished. 0 errors, 0 warnings. (took 485ms)
 

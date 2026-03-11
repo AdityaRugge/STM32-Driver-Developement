@@ -1,23 +1,14 @@
-00:37:08 **** Incremental Build of configuration Debug for project volatile_compiler_optimisation ****
+00:50:35 **** Incremental Build of configuration Debug for project volatile_compiler_optimisation ****
 make -j4 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "volatile_compiler_optimisation.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Courses\STM32-Driver-Developement\volatile_compiler_optimisation\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="volatile_compiler_optimisation.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: volatile_compiler_optimisation.elf
- 
 arm-none-eabi-size  volatile_compiler_optimisation.elf 
-arm-none-eabi-objdump -h -S volatile_compiler_optimisation.elf  > "volatile_compiler_optimisation.list"
    text	   data	    bss	    dec	    hex	filename
-    716	      0	   1568	   2284	    8ec	volatile_compiler_optimisation.elf
+    740	      0	   1568	   2308	    904	volatile_compiler_optimisation.elf
 Finished building: default.size.stdout
  
-Finished building: volatile_compiler_optimisation.list
- 
-00:37:19 **** Incremental Build of configuration Debug for project volatile_compiler_optimisation ****
+00:50:40 **** Incremental Build of configuration Debug for project volatile_compiler_optimisation ****
 make -j4 all 
 arm-none-eabi-size  volatile_compiler_optimisation.elf 
    text	   data	    bss	    dec	    hex	filename
-    716	      0	   1568	   2284	    8ec	volatile_compiler_optimisation.elf
+    740	      0	   1568	   2308	    904	volatile_compiler_optimisation.elf
 Finished building: default.size.stdout
  
