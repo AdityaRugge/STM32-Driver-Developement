@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:HelloWorld_OpenOCD_Config Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:HelloWorld_OpenOCD_Config,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SampleApp,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:HelloWorld,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ADC Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:HSE_Measurement,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:volatile_compiler_optimisation Debug
+configDescList=
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ADC\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ADC\ Debug/activeLaunchTarget=null\:---
