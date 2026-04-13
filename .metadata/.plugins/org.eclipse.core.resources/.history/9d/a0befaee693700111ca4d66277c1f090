@@ -1,0 +1,20 @@
+/*
+ * stm32_f4xx.h
+ *
+ *  Created on: Apr 12, 2026
+ *      Author: Aditya
+ */
+
+#ifndef INC_STM32_F4XX_H_
+#define INC_STM32_F4XX_H_
+
+/*
+ * base address of flash and SRAM Memories (memorymap from from datasheet)
+ */
+#define FLASH_BASEADDR		0x08000000U
+#define SRAM1_BASEADDR		0x20000000U
+#define SRAM2_BASEADDR		0x2001C000U
+#define ROM					0x1FFF0000U
+#define SRAM				SRAM1_BASEADDR
+
+#endif /* INC_STM32_F4XX_H_ */
