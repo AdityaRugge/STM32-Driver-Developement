@@ -21,7 +21,7 @@
 /*
  * AHB and APBx Bus peripheral base address
  * */
-#define PERIPH_BASE		0x40000000U
+#define PERIPH_BASE			0x40000000U
 #define APB1PERIPH_BASEADDR PERIPH_BASE
 #define APB2PERIPH_BASEADDR 0x40010000U
 #define AHB1PERIPH_BASEADDR 0x40020000U
@@ -70,5 +70,30 @@
 #define EXTI_BASEADDR		(APB2PERIPH_BASEADDR + 0x3C00)
 #define SYSCFG_BASEADDR		(APB2PERIPH_BASEADDR + 0x3800)
 
+/* Pheripheral register definition structure*/  //reference manual : 7.4.11 GPIO register map
+typedef struct
+{
+	volatile uint32_t MODER;    //GPIO port mode register
+	volatile uint32_t OTYPER;   //GPIO port output type register
+	volatile uint32_t OSPEEDR;  //GPIO port output speed register
+	volatile uint32_t PUPDR;	//GPIO port pull-up/pull-down register
+	volatile uint32_t IDR;		//GPIO port input data register
+	volatile uint32_t ODR;		//GPIO port output data register
+	volatile uint32_t BSRR;		//GPIO port bit set/reset register
+	volatile uint32_t LCKR;		//GPIO port configuration lock register
+	volatile uint32_t AFR[2];   //GPIO alternate function low/high registerAFRL or AFRH
+}GPIO_RegDef_t;
+
+/*
+ * peripheral definition : bus address tycasted to xx_RegDef_t
+ * */
+#define GPIOA 		((GPIO_RegDef_t*)GPIOA_BASEADDR)
+#define GPIOB 		((GPIO_RegDef_t*)GPIOB_BASEADDR)
+#define GPIOC 		((GPIO_RegDef_t*)GPIOC_BASEADDR)
+#define GPIOD 		((GPIO_RegDef_t*)GPIOD_BASEADDR)
+#define GPIOE 		((GPIO_RegDef_t*)GPIOE_BASEADDR)
+#define GPIOF 		((GPIO_RegDef_t*)GPIOF_BASEADDR)
+#define GPIOG 		((GPIO_RegDef_t*)GPIOG_BASEADDR)
+#define GPIOH 		((GPIO_RegDef_t*)GPIOH_BASEADDR)
 
 #endif /* INC_STM32_F4XX_H_ */
