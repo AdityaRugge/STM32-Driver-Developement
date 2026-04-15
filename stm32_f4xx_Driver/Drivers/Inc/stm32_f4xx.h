@@ -39,6 +39,10 @@
 #define GPIOG_BASEADDR		(AHB1PHRIPH_BASE + 0x1800)
 #define GPIOH_BASEADDR		(AHB1PHRIPH_BASE + 0x1C00)
 
+#define RCC_BASEADDR		(AHB1PHRIPH_BASE + 0x3800)
+
+
+
 /*
  * Bus addr of peripheral which is hanging on bus APB1 bus
  * */
@@ -85,6 +89,29 @@ typedef struct
 }GPIO_RegDef_t;
 
 /*
+ * Peripheral register definition structure for RCC
+*/
+typedef struct
+{
+	volatile unint32_t CR;		//  offset 0x00
+	volatile unint32_t PLL_CFGR; // 0x04
+	volatile unint32_t CFGR;	//  0x08
+	volatile unint32_t CIR;		//	0x0c
+	volatile unint32_t AHB1_RSTR; // 0x10 etc
+	volatile unint32_t AHB2_RSTR;
+	volatile unint32_t AHB3_RSTR;
+	volatile unint32_t RESERVED;
+	volatile unint32_t APB1_RSTR;
+	volatile unint32_t APB2_RSTR;
+	volatile unint32_t AHB1ENR;
+	volatile unint32_t AHB2ENR;
+	volatile unint32_t AHB3ENR;
+	volatile unint32_t APB1ENR;
+	volatile unint32_t APB2ENR;
+}RCC_RegDef_t;
+
+
+/*
  * peripheral definition : bus address tycasted to xx_RegDef_t
  * */
 #define GPIOA 		((GPIO_RegDef_t*)GPIOA_BASEADDR)
@@ -95,5 +122,18 @@ typedef struct
 #define GPIOF 		((GPIO_RegDef_t*)GPIOF_BASEADDR)
 #define GPIOG 		((GPIO_RegDef_t*)GPIOG_BASEADDR)
 #define GPIOH 		((GPIO_RegDef_t*)GPIOH_BASEADDR)
+
+#define RCC 		((RCC_RegDef_t*)RCC_BASEADDR)
+
+/*Clk enable macros for GPIO peripherals*/
+#define GPIOA_PERI_CLOCK_ENABLE()	(RCC->AHB1ENR |= (1<<0))
+
+/*Clk enable macros for SPIx peripherals*/
+
+
+/*Clk enable macros for I2Cx peripherals*/
+
+
+/*Clk enable macros for UARTx peripherals*/
 
 #endif /* INC_STM32_F4XX_H_ */
