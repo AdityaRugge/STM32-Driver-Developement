@@ -125,15 +125,51 @@ typedef struct
 
 #define RCC 		((RCC_RegDef_t*)RCC_BASEADDR)
 
-/*Clk enable macros for GPIO peripherals*/
-#define GPIOA_PERI_CLOCK_ENABLE()	(RCC->AHB1ENR |= (1<<0))
+/*Clk enable macros for GPIO peripherals  (RCC_AHB1ENR) */
+#define GPIOA_PCLK_EN()	(RCC->AHB1ENR |= (1 << 0))    //turn on 0'th bit : Control the bit for clk of GPIO A
+#define GPIOB_PCLK_EN()	(RCC->AHB1ENR |= (1 << 1))
+#define GPIOC_PCLK_EN()	(RCC->AHB1ENR |= (1 << 2))
+#define GPIOD_PCLK_EN()	(RCC->AHB1ENR |= (1 << 3)) 
+#define GPIOE_PCLK_EN()	(RCC->AHB1ENR |= (1 << 4))
+#define GPIOF_PCLK_EN()	(RCC->AHB1ENR |= (1 << 5))
+#define GPIOG_PCLK_EN()	(RCC->AHB1ENR |= (1 << 6))
 
 /*Clk enable macros for SPIx peripherals*/
+#define SPI1_PCLK_EN()	(RCC->AHB1ENR |= (1 << 12))   // Present on RCC_AHB2ENR
+#define SPI2_PCLK_EN()	(RCC->AHB1ENR |= (1 << 14))   // Present on RCC_AHB1ENR
+#define SPI3_PCLK_EN()	(RCC->AHB1ENR |= (1 << 15))   // Present on RCC_AHB1ENR
+
+/*Clk enable macros for I2Cx peripherals  (RCC_APB1ENR) */
+#define I2C1_PCLK_EN()	(RCC->AHB1ENR |= (1 << 21))
+#define I2C2_PCLK_EN()	(RCC->AHB1ENR |= (1 << 22))
+#define I2C3_PCLK_EN()	(RCC->AHB1ENR |= (1 << 23))
+
+/*Clk enable macros for USARTx peripherals  (RCC_APB1ENR) */
 
 
-/*Clk enable macros for I2Cx peripherals*/
-
+/*Clk enable macros for SYSCFGx peripherals  (RCC_APB1ENR) */
 
 /*Clk enable macros for UARTx peripherals*/
+
+/*----------------------------------- Clk Disable-------------------------------------------------- */
+
+/* clk disable macro for GPIOx peripherals*/
+#define GPIOA_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 0))    //turn off 0'th bit : Control the bit for clk of GPIO A
+#define GPIOB_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 1))
+#define GPIOC_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 2))
+#define GPIOD_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 3)) 
+#define GPIOE_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 4))
+#define GPIOF_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 5))
+#define GPIOG_PCLK_DI()	(RCC->AHB1ENR &= ~(1 << 6))
+
+/*Clk disable macros for SPIx peripherals*/
+#define SPI1_PCLK_EN()	(RCC->AHB1ENR &= ~ (1 << 12))   // Present on RCC_AHB2ENR
+#define SPI2_PCLK_EN()	(RCC->AHB1ENR &= ~ (1 << 14))   // Present on RCC_AHB1ENR
+#define SPI3_PCLK_EN()	(RCC->AHB1ENR &= ~ (1 << 15))   // Present on RCC_AHB1ENR
+
+/*Clk disable macros for I2Cx peripherals  (RCC_APB1ENR) */
+#define I2C1_PCLK_EN()	(RCC->AHB1ENR &= ~ (1 << 21))
+#define I2C2_PCLK_EN()	(RCC->AHB1ENR &= ~ (1 << 22))
+#define I2C3_PCLK_EN()	(RCC->AHB1ENR &= ~ (1 << 23))
 
 #endif /* INC_STM32_F4XX_H_ */
