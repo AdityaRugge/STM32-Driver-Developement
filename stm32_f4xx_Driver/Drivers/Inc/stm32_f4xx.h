@@ -5,9 +5,10 @@
  *      Author: Aditya
  */
 
+//#include <cstdint>
 #ifndef INC_STM32_F4XX_H_
 #define INC_STM32_F4XX_H_
-
+#include <stdint.h>
 /*
  * base address of flash and SRAM Memories (memorymap from from datasheet)
 */
@@ -189,5 +190,14 @@ typedef struct
 
 /*Clk disable macros for SYSCFGx peripherals  (RCC_APB2ENR) */
 #define SYSCFG_PCLK_DI()	(RCC->AHB2ENR &= ~ (1 << 14))
+
+//*some generic macros*/
+#define ENABLE				1	
+#define DISABLE				0
+#define SET					ENABLE
+#define RESET				DISABLE
+#define GPIO_PIN_SET		SET	
+#define GPIO_PIN_RESET		RESET
+
 
 #endif /* INC_STM32_F4XX_H_ */
