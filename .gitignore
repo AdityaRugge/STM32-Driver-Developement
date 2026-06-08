@@ -20,6 +20,8 @@
 .metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources
 .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs
 .metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
+\.metadata
+/.metadata
 .metadata
 STM32 F446RE Docs - Shortcut
 .metadata/.bak_0.log

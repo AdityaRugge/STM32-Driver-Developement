@@ -93,21 +93,21 @@ typedef struct
 */
 typedef struct
 {
-	volatile unint32_t CR;		//  offset 0x00
-	volatile unint32_t PLL_CFGR; // 0x04
-	volatile unint32_t CFGR;	//  0x08
-	volatile unint32_t CIR;		//	0x0c
-	volatile unint32_t AHB1_RSTR; // 0x10 etc
-	volatile unint32_t AHB2_RSTR;
-	volatile unint32_t AHB3_RSTR;
-	volatile unint32_t RESERVED;
-	volatile unint32_t APB1_RSTR;
-	volatile unint32_t APB2_RSTR;
-	volatile unint32_t AHB1ENR;
-	volatile unint32_t AHB2ENR;
-	volatile unint32_t AHB3ENR;
-	volatile unint32_t APB1ENR;
-	volatile unint32_t APB2ENR;
+	volatile uint32_t CR;		//  offset 0x00
+	volatile uint32_t PLL_CFGR; // 0x04
+	volatile uint32_t CFGR;	//  0x08
+	volatile uint32_t CIR;		//	0x0c
+	volatile uint32_t AHB1_RSTR; // 0x10 etc
+	volatile uint32_t AHB2_RSTR;
+	volatile uint32_t AHB3_RSTR;
+	volatile uint32_t RESERVED;
+	volatile uint32_t APB1_RSTR;
+	volatile uint32_t APB2_RSTR;
+	volatile uint32_t AHB1ENR;
+	volatile uint32_t AHB2ENR;
+	volatile uint32_t AHB3ENR;
+	volatile uint32_t APB1ENR;
+	volatile uint32_t APB2ENR;
 }RCC_RegDef_t;
 
 
